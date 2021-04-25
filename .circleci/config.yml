@@ -16,8 +16,13 @@ workflows:
       - JOB_NAME_2
   WORKFLOW_NAME_2:
     jobs:
-      - JOB_NAME_2
-
+      - JOB_NAME_2:
+          filters:
+            branches:
+              only:
+                - master
+                - /^circleci-.*/
+            
 jobs:
   JOB_NAME_1:
     executor: python/default
