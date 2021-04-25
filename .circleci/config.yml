@@ -9,8 +9,8 @@ parameters:
     default: 1.4.0
     
 workflows:
+  version: 2
   WORKFLOW_NAME_!:
-    version: 2
     jobs:
       - JOB_NAME_1
 
