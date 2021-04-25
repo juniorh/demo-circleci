@@ -11,9 +11,8 @@ parameters:
 workflows:
   WORKFLOW_NAME_!:
     version: 2
-    build:
-      jobs:
-        - JOB_NAME_1
+    jobs:
+      - JOB_NAME_1
 
 jobs:
   JOB_NAME_1:
