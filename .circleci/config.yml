@@ -22,7 +22,9 @@ jobs:
       - run:
           command: "uname -a"
       - run:
-          command: "pwd && id && lsb_release -a && ip address"
+          command: "pwd && id && lsb_release -a && df -h && mount && ls -la && df -h"
+      - run:
+          command: "env | sort"
       - python/install-packages:
           args: pytest
           pkg-manager: pip
