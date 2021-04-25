@@ -28,4 +28,12 @@ jobs:
       - python/install-packages:
           args: pytest
           pkg-manager: pip
+  JOB_NAME_2:
+    steps:
+      - run:
+          command: echo "This is executed on JOB_NAME_2"
+      - run:
+          command: "uname -a && pwd && id && lsb_release -a && df -h && mount && ls -la && df -h"
+      - run:
+          command: "env | sort"
           
