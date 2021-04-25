@@ -41,7 +41,7 @@ jobs:
     executor: python/default
     steps:
       - run:
-          command: echo "This is executed on JOB_NAME_2"
+          command: echo "This is executed on JOB_NAME_2 and branch OTHERS"
       - run:
           command: "uname -a && pwd && id && lsb_release -a && df -h && mount && ls -la && df -h"
       - run:
