@@ -9,10 +9,11 @@ parameters:
     default: 1.4.0
     
 workflows:
-  version: 2
-  build:
-    jobs:
-      - JOB_NAME_1
+  WORKFLOW_NAME_!:
+    version: 2
+    build:
+      jobs:
+        - JOB_NAME_1
 
 jobs:
   JOB_NAME_1:
@@ -22,3 +23,7 @@ jobs:
           command: "uname -a"
       - run:
           command: "pwd && id && lsb_release -a && ip address"
+      - python/install-packages:
+          args: pytest
+          pkg-manager: pip
+          
