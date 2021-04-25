@@ -29,6 +29,7 @@ jobs:
           args: pytest
           pkg-manager: pip
   JOB_NAME_2:
+    executor: python/default
     steps:
       - run:
           command: echo "This is executed on JOB_NAME_2"
@@ -36,4 +37,5 @@ jobs:
           command: "uname -a && pwd && id && lsb_release -a && df -h && mount && ls -la && df -h"
       - run:
           command: "env | sort"
-          
+      - run:
+          command: pip -v && pip list
