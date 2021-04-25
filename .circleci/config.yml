@@ -13,6 +13,10 @@ workflows:
   WORKFLOW_NAME_!:
     jobs:
       - JOB_NAME_1
+      - JOB_NAME_2
+  WORKFLOW_NAME_2:
+    jobs:
+      - JOB_NAME_2
 
 jobs:
   JOB_NAME_1:
